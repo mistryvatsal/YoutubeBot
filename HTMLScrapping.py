@@ -1,37 +1,3 @@
-"""import urllib.request
-from bs4 import BeautifulSoup
-import re
-import webbrowser
-# Html Scrapping using Beautiful Soup
-def html_parser(link):
-    count = 0
-    headers = {}
-
-    # User-Agent header is done to avoid exceptional error if website blocks any bot entry.
-    """
-    headers['User-Agent'] = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko)" \
-                            " Chrome/24.0.1312.27 Safari/537.17"
-    """
-    req = urllib.request.Request(link)
-    source = urllib.request.urlopen(req)
-    sourcedata = str(source.read())
-    souped_data = BeautifulSoup(sourcedata, 'html.parser')
-    for link in souped_data.findAll('a', {'href': re.compile("watch")}):
-        if not re.findall(r'https://', link.get('href')):
-            firstlink = link.get('href')
-
-            count += 1
-            browser(firstlink)
-        if count == 1:
-            break
-
-
-def browser(firstlink):
-    firstlink = 'https://www.youtube.com' + firstlink
-    webbrowser.open(firstlink)
-"""
-
-__author__ = 'Harsh'
 import webbrowser
 import bs4
 import requests
@@ -44,14 +10,13 @@ def first_open(temp):
 
 def add_list(temp):
     lista.append(temp)
-headers['User-Agent'] = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko)" \
-                            " Chrome/24.0.1312.27 Safari/537.17"
+
 def scrapping(link):
     del lista[0:len(lista)]
     print("in")
     #l=requests.get("http://"+link)
     #l=l.text   we can use this in place of urlopen to get the requests of urls and converting to text to use it for beautifulsoup
-    a=urllib.request.urlopen(link,headers=headers)
+    a=urllib.request.urlopen(link)
     soup=bs4.BeautifulSoup(a,"lxml")
     flag=0
     for i in soup.find_all(class_="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink spf-link "):
