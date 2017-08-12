@@ -1,4 +1,3 @@
-__author__ = 'Harsh'
 import webbrowser
 import bs4
 import requests
