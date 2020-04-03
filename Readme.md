@@ -1,20 +1,19 @@
 #Youtube Bot
+* This application is made to search youtube videos in an instant second and to make your searching easier. <br>
+* Search video on the application and it takes you directly to the video. Moreover you can change videos by "Next" button. It reduces time required to surf the website and find the video.<br>
 
-Takes User Name , Query to search, save the logs in the UserName.txt file.
-Searches the Query and plays the first video in web browser.
-
-GUI INCLUDED. VIDEO RELATED NEXT LINK FEATURE INCLUDED.
-
-The project is built in 3 modules:
-  Logs.py
-  User.py
-  HTMLScrapping.py
+* The project is built in 3 modules:<br>
+  1. Logs.py<br>
+  2. User.py<br>
+  3. HTMLScrapping.py<br>
  
-Run the bot using User.py.
+* Application is run using User.py<br>
 
-To do :
-  Make it more fast.
-  Make it multi functional.
+* Future goals:<br>
+  Make it multi functional.<br>
+  Contributions are happily accepted.<br>
 
-  
+
+* Here is how it works:<br>
+  ![](sample-video.gif)
   
